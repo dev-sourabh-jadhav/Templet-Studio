@@ -163,28 +163,51 @@
             let imageId = $(this).data("id");
             let imageName = $(this).data("name");
 
-
-
-            if (confirm(`Are you sure you want to delete "${imageName}"?`)) {
-                $.ajax({
-                    url: "/delete-image/" + imageId, 
-                    type: "DELETE",
-                    data: {
-                        imageName: imageName
-                    },
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    },
-                    success: function(response) {
-                        alert("Image deleted successfully!");
-                        location.reload(); // Reload to update UI
-                    },
-                    error: function(error) {
-                        alert("Error deleting image.");
-                        console.log(error);
-                    }
-                });
-            }
+            Swal.fire({
+                title: "Are you sure?",
+                text: `You are about to delete "${imageName}". This action cannot be undone!`,
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#d33",
+                cancelButtonColor: "#3085d6",
+                confirmButtonText: "Yes, delete it!"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        url: "/delete-image/" + imageId,
+                        type: "DELETE",
+                        data: {
+                            imageName: imageName
+                        },
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        },
+                        success: function(response) {
+                            Swal.fire({
+                                icon: "success",
+                                title: "Deleted!",
+                                text: "Image deleted successfully.",
+                                position: "top-end",
+                                showConfirmButton: false,
+                                timer: 3000
+                            });
+                            setTimeout(() => {
+                                location.reload();
+                            }, 3000);
+                        },
+                        error: function(error) {
+                            Swal.fire({
+                                icon: "error",
+                                title: "Error!",
+                                text: "Error deleting image.",
+                                position: "top-end",
+                                showConfirmButton: false,
+                                timer: 3000
+                            });
+                        }
+                    });
+                }
+            });
         });
     </script>
 

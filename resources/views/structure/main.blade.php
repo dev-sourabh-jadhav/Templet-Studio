@@ -47,6 +47,8 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <script src="assets/js/tiff.min.js"></script>
+
 </head>
 <!-- [Head] end -->
 <!-- [Body] Start -->
@@ -121,7 +123,7 @@
             e.preventDefault();
 
             var userId = $('#updateUserId').val();
-            
+
             var formData = {
                 name: $('#updateName').val(),
                 email: $('#updateEmail').val(),
@@ -189,8 +191,8 @@
 
     <!-- [Page Specific JS] start -->
     <!-- Apex Chart -->
-    <script src="../assets/js/plugins/apexcharts.min.js"></script>
-    <script src="../assets/js/pages/dashboard-default.js"></script>
+    {{-- <script src="../assets/js/plugins/apexcharts.min.js"></script>
+    <script src="../assets/js/pages/dashboard-default.js"></script> --}}
     <!-- [Page Specific JS] end -->
 </body>
 <!-- [Body] end -->

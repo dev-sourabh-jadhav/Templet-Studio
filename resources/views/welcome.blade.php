@@ -225,6 +225,10 @@
                                 <a class="nav-link me-4 text-white btn btn-light rounded-pill px-4 text-dark"
                                     href="/register">Register</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link me-4 text-white btn btn-light rounded-pill px-4 text-dark"
+                                href="#latest-products"">Trending</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -242,10 +246,19 @@
 
                     <!-- Slide 1 -->
                     <div class="swiper-slide">
-                        <div class="card d-flex justify-content-center align-items-center text-center border-0 large">
-                            <img src="assets/img/shivjayanti2.jpg" alt="Navratri Special"
-                                class="img-fluid centered-img">
-
+                        <div class="row g-4">
+                            <div class="col-lg-12 mb-4 d-flex justify-content-center">
+                                <div class="card text-center border-0">
+                                    <img src="assets/img/shivjayanti.jpg" alt="Shree Ram"
+                                        class="img-fluid centered-img">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 d-flex justify-content-center">
+                                <div class="card text-center border-0">
+                                    <img src="assets/img/shivjayanti1.jpg" alt="Shiv Jayanti"
+                                        class="img-fluid centered-img">
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -260,7 +273,7 @@
                             </div>
                             <div class="col-lg-12 d-flex justify-content-center">
                                 <div class="card text-center border-0">
-                                    <img src="assets/img/shivjayanti.jpg" alt="Shiv Jayanti"
+                                    <img src="assets/img/shivjayanti2.jpg" alt="Shiv Jayanti"
                                         class="img-fluid centered-img">
                                 </div>
                             </div>
@@ -269,8 +282,19 @@
 
                     <!-- Slide 3 -->
                     <div class="swiper-slide">
-                        <div class="card d-flex justify-content-center align-items-center text-center border-0 large">
-                            <img src="assets/img/shreeram1.jpg" alt="Shree Ram 1" class="img-fluid centered-img">
+                        <div class="row g-4">
+                            <div class="col-lg-12 mb-4 d-flex justify-content-center">
+                                <div class="card text-center border-0">
+                                    <img src="assets/img/navratri1.jpg" alt="Shree Ram"
+                                        class="img-fluid centered-img">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 d-flex justify-content-center">
+                                <div class="card text-center border-0">
+                                    <img src="assets/img/shreeram1.jpg" alt="Shiv Jayanti"
+                                        class="img-fluid centered-img">
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -279,13 +303,14 @@
                         <div class="row g-4">
                             <div class="col-lg-12 mb-4 d-flex justify-content-center">
                                 <div class="card text-center border-0">
-                                    <img src="assets/img/standi.jpg" alt="Standi" class="img-fluid centered-img">
+                                    <img src="assets/img/shreeram.jpg" alt="Shree Ram"
+                                        class="img-fluid centered-img">
                                 </div>
                             </div>
                             <div class="col-lg-12 d-flex justify-content-center">
                                 <div class="card text-center border-0">
-                                    <img src="assets/img/standi1.jpg" alt="Standi 1" class="img-fluid centered-img">
-
+                                    <img src="assets/img/shivjayanti6.jpg" alt="Shiv Jayanti"
+                                        class="img-fluid centered-img">
                                 </div>
                             </div>
                         </div>
