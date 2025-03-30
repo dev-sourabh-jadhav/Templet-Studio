@@ -27,7 +27,7 @@ The Photo Studio Management System is a web-based application designed to stream
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/photo-studio-management.git
+   git clone https://github.com/dev-sourabh-jadhav/Templet-Studio.git
 
 2. **Install Dependencies:**:
    ```bash
