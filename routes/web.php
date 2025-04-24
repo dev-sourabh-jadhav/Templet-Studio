@@ -51,6 +51,8 @@ Route::middleware(['auth.user'])->group(function () {
 
     Route::post('/categories/store', [UploadImagesController::class, 'store'])->name('categories.store');
     Route::get('/categories/show', [UploadImagesController::class, 'show'])->name('categories.show');
+    Route::post('/categories/update/{id}', [UploadImagesController::class, 'update']);
+    Route::delete('/categories/delete/{id}', [UploadImagesController::class, 'destroy']);
 
 
     Route::get('/add-image', [UploadImagesController::class, 'imageupload'])->name('add-image');

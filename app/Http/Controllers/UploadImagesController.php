@@ -150,7 +150,7 @@ class UploadImagesController extends Controller
         $image = ImageModel::find($id);
 
         $imageName = $request->imageName;
-        
+
         if (!$image) {
             return response()->json(['error' => 'Image not found'], 404);
         }
@@ -169,6 +169,27 @@ class UploadImagesController extends Controller
         return response()->json(['success' => 'Image deleted successfully']);
     }
 
-   
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'categories_name' => 'required|string|max:255'
+        ]);
+
+        $category = CategoriesModel::findOrFail($id);
+        $category->categories_name = $request->categories_name;
+        $category->save();
+
+        return response()->json(['success' => true]);
+    }
+
+    public function destroy($id)
+    {
+        $category = CategoriesModel::findOrFail($id);
+        $category->delete();
+
+        return response()->json(['success' => true]);
+    }
+
+
 
 }
